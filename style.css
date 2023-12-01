@@ -1,0 +1,25 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    height: 100vh;
+    padding: 2rem;
+}
+.container{
+    width: 380px;
+}
+header{
+    display: flex;
+    justify-content: space-between;
+}
+ul{
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 10px;
+}
+ul li{
+    list-style: none;
+    width: calc(100%/7);
+    
+}
