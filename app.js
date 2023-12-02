@@ -33,7 +33,7 @@ function renderCalender(){
     console.log(prevMonthLastDay)
 
     for(let i = currentMonthFirstDay ; i>0 ;i--){
-        dateHTML += `<li class = "inactive">${prevMonthLastDay - i +1}</li>`
+        dateHTML += `<li class = "inactive"><span>${prevMonthLastDay - i +1}</span></li>`
     }
 
 
@@ -42,14 +42,18 @@ function renderCalender(){
     //currentMonthendDate
     const currentMonthEndDate = new Date(year,month +1,0).getDate();
     for(let i=1; i<=currentMonthEndDate;i++){
-        dateHTML += `<li>${i}</li>`
+        let className = year === new Date().getFullYear() &&
+                month === new Date().getMonth() && 
+                i === new Date().getDate()?"today":""; 
+
+        dateHTML += `<li class="${className}"><span>${i}</span></li>`
     }
 
     //nextmonthstartdate
     const curMonthEndDay = new Date(year,month,currentMonthEndDate).getDay()
 
     for(let i = 1 ; i <= 6-curMonthEndDay; i++){
-        dateHTML += `<li class= "inactive">${i}</li>`
+        dateHTML += `<li class= "inactive"><span>${i}</span></li>`
     }
     dates.innerHTML = dateHTML;
 
@@ -81,7 +85,9 @@ navis.forEach(arr=>{
         date = new Date(year, month, new Date().getDate())
         year = date.getFullYear()
         month = date.getMonth();
-        
+        console.log(date)
+        console.log(year)
+        console.log(month)
         renderCalender();
 
     }))

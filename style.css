@@ -8,7 +8,7 @@ body{
 }
 .container{
     width: 300px;
-    background: #ccc;
+    background: #de8888;
     border-radius: 10px;
     /* padding: 10px; */
 }
@@ -27,16 +27,27 @@ ul{
     display: flex;
     flex-wrap: wrap;
     /* margin-top: 10px; */
-    padding:10px 0 10px 20px;
+    padding:5px 0 0px 20px;
 }
 ul li{
     list-style: none;
     width: calc(100%/7);
-    margin-top: 10px;
+    margin-top: 5px;
     
 }
+ul li span{
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    text-align: center;
+    border-radius:50% ;
+
+}
+.dates{
+    padding-bottom: 10px;
+}
 ul li.inactive{
-    color: #ccc;
+    color: #f4e2e2;
 }
 button{
     background:none;
@@ -54,3 +65,7 @@ i:hover{
     color: #ccc;
 }
 
+li.today span
+{
+    background-color: aliceblue;
+}
