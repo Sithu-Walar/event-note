@@ -7,19 +7,50 @@ body{
     padding: 2rem;
 }
 .container{
-    width: 380px;
+    width: 300px;
+    background: #ccc;
+    border-radius: 10px;
+    /* padding: 10px; */
 }
 header{
+    /* width: 100%; */
     display: flex;
     justify-content: space-between;
+    /* padding-right: 30px; */
+    background-color: rgb(255, 108, 108);
+    /* padding: 10px; */
+    height: 60px;
+    align-items: center;
+    padding: 10px;
 }
 ul{
     display: flex;
     flex-wrap: wrap;
-    margin-top: 10px;
+    /* margin-top: 10px; */
+    padding:10px 0 10px 20px;
 }
 ul li{
     list-style: none;
     width: calc(100%/7);
+    margin-top: 10px;
     
 }
+ul li.inactive{
+    color: #ccc;
+}
+button{
+    background:none;
+    border: none;
+}
+i{
+    width: 15px;
+    height: 15px;
+    border: none;
+    text-align: center;
+    opacity: 100%;
+    background-color:;
+}
+i:hover{
+    color: #ccc;
+}
+
